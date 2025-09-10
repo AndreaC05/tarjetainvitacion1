@@ -1,10 +1,9 @@
 * {
   padding: 0px;
   margin: 0px;
-  font-family: 'Waltograph', sans-serif;
 }
 
 @font-face {
   font-family: 'Waltograph';
-  src: url('/fonts/waltograph/waltographUI.ttf') format('truetype');
+  src: url('assets/fonts/waltograph/waltographUI.ttf') format('truetype');
 }
