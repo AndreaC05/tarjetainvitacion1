@@ -2,6 +2,7 @@ import "../style/Contenido.css";
 import Musica from "./Musica";
 import Calendario from "./Calendario";
 import Trazo from "../assets/trazo.svg";
+import Trazo_dos from "../assets/trazo_dos.svg";
 
 export default function Contenido() {
   return (
@@ -56,6 +57,7 @@ export default function Contenido() {
         </div>
         <div className="reserva_dia">
           <h2>Reserva este día</h2>
+          <img src={Trazo_dos} alt="" />
           <div className="calendario">
             <Calendario />
           </div>

@@ -31,4 +31,14 @@
     position: absolute;
     top: 0px;
     z-index: 9;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    height: 100vh;
+    /* 🔽 Oculta el scrollbar */
+    scrollbar-width: none;         /* Firefox */
+    -ms-overflow-style: none;      /* IE 10+ */
+}
+
+.contenido_text::-webkit-scrollbar {
+    display: none;                 /* Chrome, Safari y Opera */
 }
