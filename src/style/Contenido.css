@@ -88,7 +88,8 @@
 }
 
 .text_subtitlo {
-  margin-top: 10px;
+  margin-top: 5px;
+  align-items: center;
 }
 
 .text_subtitlo p {
@@ -98,7 +99,7 @@
   font-size: 35px;
 }
 
-.text_subtitlo p strong {
+.text_subtitlo p:nth-child(2) {
   font-family: "Love Light", cursive !important; 
   font-weight: 400;
   font-size: 100px;
@@ -112,6 +113,8 @@
   -webkit-background-clip: text;
   color: transparent;
   -webkit-text-fill-color: transparent;
+  margin-left: 2px;
+  margin-right: 2px;
   
 }
 

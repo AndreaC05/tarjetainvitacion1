@@ -1,10 +1,11 @@
 import "../style/Contenido.css";
+import Musica from "./Musica";
 
 export default function Contenido() {
   return (
     <>
       <div className="container_texto_invitacion">
-        <div class="svg-container">
+        <div className="svg-container">
           <svg width="600" height="150" viewBox="0 0 365 150">
             <defs>
               <path
@@ -40,8 +41,13 @@ export default function Contenido() {
             <h1>Celeste</h1>
           </div>
         </div>
-        <div className="text_subtitlo">
-            <p>esta cumpliendo <strong>5</strong> años</p>
+        <div className="text_subtitlo flex">
+            <p>esta cumpliendo</p>
+            <p> 5 </p>
+            <p> años</p>
+        </div>
+        <div className="musica_reproductor">
+          <Musica />
         </div>
       </div>
     </>
