@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { Button } from "primereact/button";
 import Music from "../assets/Music/tinkerbell.mp3";
+import "../style/Musica.css";
 
 export default function Musica() {
   const [isPlaying, setIsPlaying] = useState(false);
