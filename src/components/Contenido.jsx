@@ -1,5 +1,7 @@
 import "../style/Contenido.css";
 import Musica from "./Musica";
+import Calendario from "./Calendario";
+import Trazo from "../assets/trazo.svg";
 
 export default function Contenido() {
   return (
@@ -48,6 +50,15 @@ export default function Contenido() {
         </div>
         <div className="musica_reproductor">
           <Musica />
+        </div>
+        <div className="img_trazo mt-4">
+          <img src={Trazo} alt="" />
+        </div>
+        <div className="reserva_dia">
+          <h2>Reserva este día</h2>
+          <div className="calendario">
+            <Calendario />
+          </div>
         </div>
       </div>
     </>

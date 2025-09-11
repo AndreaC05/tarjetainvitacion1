@@ -14,10 +14,6 @@
   z-index: 3;
 }
 
-.svg-container {
-  /* display: flex; */
-}
-
 .svg-text {
   font-size: 40px;
   font-weight: bold;
