@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Gwendolyn:wght@400;700&family=Love+Light&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Gwendolyn:wght@400;700&family=Love+Light&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Italiana&display=swap");
 
 .container_texto_invitacion {
   /* overflow: auto; */
@@ -20,7 +21,7 @@
   fill: url(#grad1); /* Gradiente */
   stroke: #3a3a3a; /* Borde oscuro */
   stroke-width: 1px;
-  font-family: 'Waltograph', sans-serif;
+  font-family: "Waltograph", sans-serif;
 }
 
 .img_logo {
@@ -39,7 +40,7 @@
 
 .nombre h1 {
   font-size: 55px;
-  font-family: 'Waltograph', sans-serif;
+  font-family: "Waltograph", sans-serif;
   font-weight: bold;
   background: linear-gradient(
     90deg,
@@ -57,28 +58,20 @@
   -webkit-text-fill-color: transparent;
 
   /* sombra animada simulando neón dorado */
-  text-shadow:
-    0 0 5px rgba(255, 215, 0, 0.5),
-    0 0 10px rgba(255, 193, 7, 0.5),
-    0 0 20px rgba(255, 171, 0, 0.5),
-    0 0 40px rgba(255, 140, 0, 0.3);
+  text-shadow: 0 0 5px rgba(255, 215, 0, 0.5), 0 0 10px rgba(255, 193, 7, 0.5),
+    0 0 20px rgba(255, 171, 0, 0.5), 0 0 40px rgba(255, 140, 0, 0.3);
 
   animation: goldGlow 2s infinite alternate;
 }
 
 @keyframes goldGlow {
   0% {
-    text-shadow:
-      0 0 5px rgba(255, 215, 0, 0.4),
-      0 0 10px rgba(255, 193, 7, 0.4),
-      0 0 20px rgba(255, 171, 0, 0.4),
-      0 0 30px rgba(255, 140, 0, 0.2);
+    text-shadow: 0 0 5px rgba(255, 215, 0, 0.4), 0 0 10px rgba(255, 193, 7, 0.4),
+      0 0 20px rgba(255, 171, 0, 0.4), 0 0 30px rgba(255, 140, 0, 0.2);
   }
   100% {
-    text-shadow:
-      0 0 10px rgba(255, 215, 0, 0.9),
-      0 0 20px rgba(255, 193, 7, 0.8),
-      0 0 40px rgba(255, 171, 0, 0.7),
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.9),
+      0 0 20px rgba(255, 193, 7, 0.8), 0 0 40px rgba(255, 171, 0, 0.7),
       0 0 80px rgba(255, 140, 0, 0.6);
   }
 }
@@ -91,12 +84,12 @@
 .text_subtitlo p {
   font-family: "Gwendolyn", cursive !important;
   font-weight: 700;
-  color: #FFF5E0;
+  color: #fff5e0;
   font-size: 35px;
 }
 
 .text_subtitlo p:nth-child(2) {
-  font-family: "Love Light", cursive !important; 
+  font-family: "Love Light", cursive !important;
   font-weight: 400;
   font-size: 100px;
   background: linear-gradient(
@@ -111,10 +104,9 @@
   -webkit-text-fill-color: transparent;
   margin-left: 2px;
   margin-right: 2px;
-  
 }
 
-.reserva_dia, 
+.reserva_dia,
 .hora_fiesta {
   display: flex;
   flex-direction: column;
@@ -125,11 +117,79 @@
 .reserva_dia h2 {
   font-family: "Gwendolyn", cursive !important;
   font-size: 40px;
-  color: #FFF5E0;
+  color: #fff5e0;
 }
 
 .hora_fiesta h2 {
   font-family: "Gwendolyn", cursive !important;
   font-size: 40px;
-  color: #FFF5E0;
+  color: #fff5e0;
+}
+
+.container_butons {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.buton_direccion Button {
+  background: linear-gradient(
+    180deg,
+    rgba(248, 231, 164, 1) 0%,
+    rgba(233, 167, 66, 1) 100%
+  );
+  border: none;
+  padding: 2px 20px;
+  font-family: "Gwendolyn", cursive !important;
+  font-size: 25px;
+  color: #3a3a3a;
+}
+
+.buton_whatsapp {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.buton_whatsapp p {
+  text-align: center;
+  width: 380px;
+  color: aliceblue;
+  font-family: "Italiana", sans-serif;
+  font-size: 25px;
+}
+
+.buton_whatsapp Button {
+  margin-top: 20px;
+  background: linear-gradient(
+    180deg,
+    rgba(248, 231, 164, 1) 0%,
+    rgba(233, 167, 66, 1) 100%
+  );
+  border: none;
+  padding: 2px 20px;
+  font-family: "Gwendolyn", cursive !important;
+  font-size: 25px;
+  color: #3a3a3a;
+}
+
+.texto_esperamos h1 {
+  font-size: 40px;
+  transition: all 0.2s ease !important;
+  animation: puls 1.5s infinite;
+}
+
+@keyframes puls {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }

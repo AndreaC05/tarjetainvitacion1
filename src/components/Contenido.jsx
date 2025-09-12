@@ -1,3 +1,4 @@
+import { Button } from "primereact/button";
 import "../style/Contenido.css";
 import Musica from "./Musica";
 import Calendario from "./Calendario";
@@ -46,9 +47,9 @@ export default function Contenido() {
           </div>
         </div>
         <div className="text_subtitlo flex">
-            <p>esta cumpliendo</p>
-            <p> 5 </p>
-            <p> años</p>
+          <p>esta cumpliendo</p>
+          <p> 5 </p>
+          <p> años</p>
         </div>
         <div className="musica_reproductor">
           <Musica />
@@ -63,12 +64,32 @@ export default function Contenido() {
             <Calendario />
           </div>
         </div>
-        <div className="hora_fiesta"> 
+        <div className="hora_fiesta">
           <h2>¡Tan solo faltan!</h2>
           <img src={Trazo_dos} alt="" />
           <div className="hora">
             <Hora />
           </div>
+        </div>
+        <div className="container_butons mb-5">
+          <div className="buton_direccion">
+            <a href="">
+              <Button icon="pi pi-map-marker" label="Ver Ubicación" />
+            </a>
+          </div>
+          <div className="buton_whatsapp mt-4">
+            <p>
+              Todo esta siendo preparado con mucho amor, y tu compañía lo hará
+              perfecto. Por favor, confirma tu asistencia en este día
+              especial.
+            </p>
+            <a href="">
+              <Button icon="pi pi-comment" label="Confirmar" />
+            </a>
+          </div>
+        </div>
+        <div className="texto_esperamos mt-2">
+          <h1>¡Te esperamos!</h1>
         </div>
       </div>
     </>
