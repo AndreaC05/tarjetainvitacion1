@@ -114,7 +114,8 @@
   
 }
 
-.reserva_dia {
+.reserva_dia, 
+.hora_fiesta {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -127,3 +128,8 @@
   color: #FFF5E0;
 }
 
+.hora_fiesta h2 {
+  font-family: "Gwendolyn", cursive !important;
+  font-size: 40px;
+  color: #FFF5E0;
+}

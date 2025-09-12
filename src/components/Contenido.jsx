@@ -1,6 +1,7 @@
 import "../style/Contenido.css";
 import Musica from "./Musica";
 import Calendario from "./Calendario";
+import Hora from "./Hora";
 import Trazo from "../assets/trazo.svg";
 import Trazo_dos from "../assets/trazo_dos.svg";
 
@@ -60,6 +61,13 @@ export default function Contenido() {
           <img src={Trazo_dos} alt="" />
           <div className="calendario">
             <Calendario />
+          </div>
+        </div>
+        <div className="hora_fiesta"> 
+          <h2>¡Tan solo faltan!</h2>
+          <img src={Trazo_dos} alt="" />
+          <div className="hora">
+            <Hora />
           </div>
         </div>
       </div>
