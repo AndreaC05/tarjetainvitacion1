@@ -20,7 +20,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* font-size: 30px; */
   color: aliceblue;
 }
 
@@ -36,6 +35,6 @@
 .hora_tiempo  span:nth-child(2), 
 .minutos_tiempo span:nth-child(2), 
 .segundos_tiempo span:nth-child(2) {
-    font-size: 35px;
+    font-size: 30px;
     font-family: "Gwendolyn", cursive !important;
 }
