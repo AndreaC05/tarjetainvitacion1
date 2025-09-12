@@ -1,4 +1,5 @@
 import "../style/Calendario.css";
+import "../style/Responsive.css";
 import Tinkerbell from "../assets/sombra_tinkerbell.svg";
 
 export default function Calendario() {

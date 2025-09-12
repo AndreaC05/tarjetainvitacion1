@@ -9,10 +9,15 @@
   align-items: center;
 }
 
-.curved_text svg {
+.svg-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.svg-container svg {
   width: 100%;
   height: auto;
-  z-index: 3;
 }
 
 .svg-text {
@@ -25,7 +30,7 @@
 }
 
 .img_logo {
-  margin-top: -80px;
+  margin-top: -110px;
 }
 
 .img_logo img {
@@ -35,7 +40,7 @@
 
 .nombre {
   position: absolute;
-  top: 280px;
+  top: 310px;
 }
 
 .nombre h1 {

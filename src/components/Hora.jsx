@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../style/Hora.css";
+import "../style/Hora.css";
 
 export default function Hora() {
   const [timeLeft, setTimeLeft] = useState({

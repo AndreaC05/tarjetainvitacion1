@@ -75,7 +75,7 @@ h1 {
   height: 50px;
   transform: translate(-50%, -50%);
   z-index: 2; /* encima del número */
-  opacity: 1.0; 
+  opacity: o.8; 
   pointer-events: none;
 }
 

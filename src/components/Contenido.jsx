@@ -1,5 +1,6 @@
 import { Button } from "primereact/button";
 import "../style/Contenido.css";
+import "../style/Responsive.css";
 import Musica from "./Musica";
 import Calendario from "./Calendario";
 import Hora from "./Hora";
@@ -11,16 +12,15 @@ export default function Contenido() {
     <>
       <div className="container_texto_invitacion">
         <div className="svg-container">
-          <svg width="600" height="150" viewBox="0 0 365 150">
+          <svg viewBox="0 0 400 200" preserveAspectRatio="xMidYMid meet">
             <defs>
               <path
                 id="curve"
-                d="M 10 110 Q 200 0 390 130"
+                d="M 20 150 Q 200 20 380 150"
                 stroke="none"
                 fill="none"
               />
 
-              {/* Gradiente SVG */}
               <linearGradient id="grad1" x1="0%" y1="0%" x2="0%" y2="100%">
                 <stop
                   offset="0%"
@@ -32,11 +32,15 @@ export default function Contenido() {
                 />
               </linearGradient>
             </defs>
+
             <text className="svg-text">
-              <textPath href="#curve">¡Ven a celebrar!</textPath>
+              <textPath href="#curve" startOffset="50%" textAnchor="middle">
+                ¡Ven a celebrar!
+              </textPath>
             </text>
           </svg>
         </div>
+
         <div className="img_logo">
           <img
             src="https://res.cloudinary.com/dnao6nouz/image/upload/v1757452190/descarga_1_l5tlnh.jpg"
@@ -73,17 +77,19 @@ export default function Contenido() {
         </div>
         <div className="container_butons mb-5">
           <div className="buton_direccion">
-            <a href="">
+            <a href="https://maps.app.goo.gl/8JVW2B5yPjbhDADKA" target="_blank">
               <Button icon="pi pi-map-marker" label="Ver Ubicación" />
             </a>
           </div>
           <div className="buton_whatsapp mt-4">
             <p>
               Todo esta siendo preparado con mucho amor, y tu compañía lo hará
-              perfecto. Por favor, confirma tu asistencia en este día
-              especial.
+              perfecto. Por favor, confirma tu asistencia en este día especial.
             </p>
-            <a href="">
+            <a
+              href="https://wa.me/51950874416?text=Hola%20quiero%20confirmar%20mi%20asistencia%20a%20tu%20fiesta."
+              target="_blank"
+            >
               <Button icon="pi pi-comment" label="Confirmar" />
             </a>
           </div>

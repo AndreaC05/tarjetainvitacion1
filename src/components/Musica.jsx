@@ -6,9 +6,7 @@ import "../style/Musica.css";
 export default function Musica() {
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef(null);
-
-  // Pon aquí la ruta de tu archivo de música
-  const musicFile = Music; // Cambia esto por tu archivo
+  const musicFile = Music;
 
   const togglePlayPause = () => {
     if (isPlaying) {
@@ -20,72 +18,94 @@ export default function Musica() {
   };
 
   const handleTimeUpdate = () => {
-    setCurrentTime(audioRef.current.currentTime);
+    // Puedes mostrar progreso si lo necesitas
   };
 
   const handleLoadedMetadata = () => {
-    setDuration(audioRef.current.duration);
+    // Puedes capturar duración si lo necesitas
   };
 
   const handleEnded = () => {
     setIsPlaying(false);
-    setCurrentTime(0);
+    audioRef.current.currentTime = 0;
   };
 
+  // 🔁 Reproducción automática tras 5 segundos
+  useEffect(() => {
+    const handleUserInteraction = () => {
+      setTimeout(() => {
+        audioRef.current
+          .play()
+          .then(() => {
+            setIsPlaying(true);
+          })
+          .catch((error) => {
+            console.warn("No se pudo reproducir:", error);
+          });
+      }, 1000);
+
+      window.removeEventListener("click", handleUserInteraction);
+    };
+
+    // Espera el primer clic del usuario
+    window.addEventListener("click", handleUserInteraction);
+
+    return () => window.removeEventListener("click", handleUserInteraction);
+  }, []);
 
   return (
-    <>
-      <div className="container_reproductor">
-        <audio
-          ref={audioRef}
-          src={musicFile}
-          onTimeUpdate={handleTimeUpdate}
-          onLoadedMetadata={handleLoadedMetadata}
-          onEnded={handleEnded}
-        />
+    <div className="container_reproductor">
+      <audio
+        ref={audioRef}
+        src={musicFile}
+        onTimeUpdate={handleTimeUpdate}
+        onLoadedMetadata={handleLoadedMetadata}
+        onEnded={handleEnded}
+      />
 
-        <Button
-          icon="pi pi-refresh"
-          className="control-icon"
-          text
-          onClick={() => {
-            /* shuffle logic */
-          }}
-        />
+      <Button
+        icon="pi pi-refresh"
+        className="control-icon"
+        text
+        onClick={() => {
+          // Shuffle no implementado
+        }}
+      />
 
-        <Button
-          icon="pi pi-step-backward-alt"
-          className="control-icon"
-          text
-          onClick={() => {
-            audioRef.current.currentTime -= 10;
-          }}
-        />
+      <Button
+        icon="pi pi-step-backward-alt"
+        className="control-icon"
+        text
+        onClick={() => {
+          audioRef.current.currentTime -= 10;
+        }}
+      />
 
-        <Button
-          icon={isPlaying ? "pi pi-pause" : "pi pi-play"}
-          className="play-button"
-          onClick={togglePlayPause}
-        />
+      <Button
+        icon={isPlaying ? "pi pi-pause" : "pi pi-play"}
+        className="play-button"
+        onClick={togglePlayPause}
+      />
 
-        <Button
-          icon="pi pi-step-forward-alt"
-          className="control-icon"
-          text
-          onClick={() => {
-            audioRef.current.currentTime += 10;
-          }}
-        />
+      <Button
+        icon="pi pi-step-forward-alt"
+        className="control-icon"
+        text
+        onClick={() => {
+          audioRef.current.currentTime += 10;
+        }}
+      />
 
-        <Button
-          icon="pi pi-replay"
-          className="control-icon"
-          text
-          onClick={() => {
-            /* repeat logic */
-          }}
-        />
-      </div>
-    </>
+      <Button
+        icon="pi pi-replay"
+        className="control-icon"
+        text
+        onClick={() => {
+          audioRef.current.currentTime = 0;
+          audioRef.current.play();
+          setIsPlaying(true);
+        }}
+      />
+    </div>
   );
 }
