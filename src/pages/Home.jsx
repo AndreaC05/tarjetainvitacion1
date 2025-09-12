@@ -1,5 +1,5 @@
 import "../style/Home.css";
-import Contenido from "../components/Contenido";
+import Contenido from "../components/Contenido.jsx";
 
 export default function Home() {
     return (

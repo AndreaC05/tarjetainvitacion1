@@ -1,9 +1,9 @@
 import { Button } from "primereact/button";
 import "../style/Contenido.css";
 import "../style/Responsive.css";
-import Musica from "./Musica";
-import Calendario from "./Calendario";
-import Hora from "./Hora";
+import Musica from "./Musica.jsx";
+import Calendario from "./Calendario.jsx";
+import Hora from "./Hora.jsx";
 import Trazo from "../assets/trazo.svg";
 import Trazo_dos from "../assets/trazo_dos.svg";
 
